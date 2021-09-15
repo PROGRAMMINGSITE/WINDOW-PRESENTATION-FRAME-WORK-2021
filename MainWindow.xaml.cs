@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DESKTOP_APPLICATION_IMAGE_AND_LABEL
+namespace DESKTOP_APPLICATION_WITH_LINK_PROVIDER
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,12 +27,7 @@ namespace DESKTOP_APPLICATION_IMAGE_AND_LABEL
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
         }
     }
 }
